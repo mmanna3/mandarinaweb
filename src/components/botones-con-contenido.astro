@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const botones = await getCollection("botones");
+---
+
+<div class="mb-10 mt-8 mx-14 text-xl text-center flex flex-col gap-5">
+  {
+    botones.map((boton) => (
+      <div class="border border-slate-800 rounded-xs py-4 px-6">
+        <a href={boton.data.link} id={boton.data.id}>
+          <div class="flex flex-row justify-center">
+            <p class="tracking-wider">{boton.data.titulo}</p>
+            {boton.data.imagenTitulo && (
+              <Image
+                class="ml-2 mt-[2px] w-5 h-5"
+                src={boton.data.imagenTitulo}
+                alt={boton.data.titulo}
+                width={20}
+                height={20}
+              />
+            )}
+          </div>
+          {boton.data.subtitulo && (
+            <div class="text-[0.95rem] mt-1">
+              <p>{boton.data.subtitulo}</p>
+            </div>
+          )}
+        </a>
+      </div>
+    ))
+  }
+</div>

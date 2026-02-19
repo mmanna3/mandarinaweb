@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="flex justify-center space-x-2 mt-4 mb-6">
+  <a
+    id="footer-instagram"
+    href="https://instagram.com/mandarina.extrema"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-track
+    data-url="/"
+    data-id="footer-instagram"
+  >
+    <Image
+      class="icono-red"
+      src="/instagram.png"
+      alt="Instagram"
+      width={35}
+      height={35}
+    />
+  </a>
+  <a
+    id="footer-spotify"
+    href="https://open.spotify.com/artist/7lo1iNrrVW77oauQUED0tF"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-track
+    data-url="/"
+    data-id="footer-spotify"
+  >
+    <Image
+      class="icono-red spotify"
+      src="/spotify.png"
+      alt="Spotify"
+      width={35}
+      height={35}
+    />
+  </a>
+  <a
+    id="footer-youtube"
+    href="https://www.youtube.com/channel/UC1YAsQ6YbvE4lXEKux-U3Yg/featured"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-track
+    data-url="/"
+    data-id="footer-youtube"
+  >
+    <Image
+      class="icono-red"
+      src="/youtube.png"
+      alt="YouTube"
+      width={35}
+      height={35}
+    />
+  </a>
+</div>
+
+<!-- <script>
+	document.querySelectorAll('a[data-track]').forEach((link) => {
+		link.addEventListener('mousedown', () => {
+			const url = link.dataset.url ?? '';
+			const id = link.dataset.id ?? '';
+			console.log(`Clic en ${url} con id ${id}`);
+		});
+	});
+</script> -->
