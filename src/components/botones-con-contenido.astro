@@ -9,7 +9,7 @@ const botones = await getCollection("botones");
   {
     botones.map((boton) => (
       <div class="border border-slate-800 rounded-xs py-4 px-6">
-        <a href={boton.data.link} id={boton.data.id}>
+        <a href={boton.data.link} id={boton.id}>
           <div class="flex flex-row justify-center">
             <p class="tracking-wider">{boton.data.titulo}</p>
             {boton.data.imagenTitulo && (

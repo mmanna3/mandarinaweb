@@ -1,5 +1,4 @@
 ---
-id: video-más-allá
 titulo: Más allá (cover)
 subtitulo: voz y saxo (CJS)
 imagenTitulo: /youtube.png
