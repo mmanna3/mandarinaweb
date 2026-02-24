@@ -2,7 +2,9 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-const botones = await getCollection("botones");
+const botones = (await getCollection("botones")).toSorted((a, b) =>
+  a.id.localeCompare(b.id)
+);
 ---
 
 <div class="mb-10 mt-8 mx-14 text-xl text-center flex flex-col gap-5">
